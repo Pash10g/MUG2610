@@ -32,5 +32,5 @@ Run the following command via the `mongo shell` and follow the instructions:
 Disclaimer
 ----------
 
-This software is not supported by [MongoDB, Inc.](http://www.mongodb.com) under any of their commercial support subscriptions or otherwise. Any usage of mtools is at your own risk.
+This software is not supported by [MongoDB, Inc.](http://www.mongodb.com) under any of their commercial support subscriptions or otherwise. Any usage of MUG2610 is at your own risk.
 
