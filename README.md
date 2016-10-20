@@ -9,9 +9,9 @@ This are 2 cool excersizes to learn how to use the new $facet search and $graphL
 Requirements 
 ------------------------------------------
 
-Install you mongoDB 3.4 development edition from : https://www.mongodb.com/download-center#community (see Development Releases)
+Install your MongoDB 3.4 development edition from : https://www.mongodb.com/download-center#community (see Development Releases)
 
-Run the mongodb standalone instance.
+Run the mongod standalone instance.
 
 Clone this project and cd to `MUG2610` directory.
 
