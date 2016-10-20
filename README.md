@@ -23,7 +23,7 @@ Run the following command via the `mongo shell` and follow the instructions:
 
 `mongo --quiet --shell facet/facet.js` 
 
-## Facet
+## graphLookup
 Run the following command via the `mongo shell` and follow the instructions:
 
 `mongo --quiet --shell graphLookup/graphLookup.js` 
