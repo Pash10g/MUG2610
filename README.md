@@ -21,12 +21,12 @@ Instructions
 ## Facet
 Run the following command via the `mongo shell` and follow the instructions:
 
-`mongo --quite --shell facet/facet.js` 
+`mongo --quiet --shell facet/facet.js` 
 
 ## Facet
 Run the following command via the `mongo shell` and follow the instructions:
 
-`mongo --quite --shell graphLookup/graphLookup.js` 
+`mongo --quiet --shell graphLookup/graphLookup.js` 
 
 
 Disclaimer
