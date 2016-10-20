@@ -4,18 +4,18 @@ print("Welcome to the Facet search excersize")
 print("====================================")
 print(" ")
 print("For hints please type:")
-print("hint_basic() - Basic hint")
-print("hint_advanced() - Advanced hint")
+print("basic_hint() - Basic hint")
+print("detailed_hint() - Advanced hint")
 print("answer() - The answer")
-var hint_basic = function() {
-   print("db.exhibits.aggregate( [\
+var basic_hint = function() {
+   print("db.products.aggregate( [\
    {\
       $facet: { \"categorizedByTags\": [ ... ],\
       \"categorizedByPrice\": [ ... ],\
       \"categorizedByPrice(Auto)\": [ ... ]\}}]).pretty()")
 }
 
-var hint_advanced = function() {
+var detailed_hint = function() {
  print("db.products.aggregate( [\
    {\
       $facet: { \"categorizedByTags\": [  { $unwind: \"<xxx>\" },  { $sortByCount: \"<xxx>\" } ],\
