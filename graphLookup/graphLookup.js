@@ -2,14 +2,14 @@ print("Welcome to the graphLookup excersize")
 print("====================================")
 print(" ")
 print("For hints please tyoe:")
-print("hint_basic() - Basic hint")
-print("hint_advanced() - Advanced hint")
+print("basic_hint() - Basic hint")
+print("detailed_hint() - Advanced hint")
 print("answer() - The answer")
-var hint_basic = function() {
-	print("db.travelers.aggregate( [ {$graphLookup: { ... }}] ).pretty()")
+var basic_hint = function() {
+	print("db.users.aggregate( [ {$graphLookup: { ... }}] ).pretty()")
 }
 
-var hint_advanced = function() {
+var detailed_hint = function() {
        print("db.users.aggregate( [{$graphLookup: { from: \"<aaa>\",\
          startWith: \"<xxx>\",\
          connectFromField: \"<xxx>\",\
@@ -48,7 +48,7 @@ print("users - docs structure : {_id : Int , name : String , image : String , pe
 print(" ")
 print(" The Task: ")
 print("=============")
-print("For each document in the uses collection, we need to find their friends (approved_requests) and their friends of friends . Make sure that the friends of pending requestes are not shown. The operation specifies a maximum number of recursion to 2.")
+print("For each document in the users collection, we need to find each user friends (approved_requests) and their friends of friends. Make sure that the friends of pending requestes are not shown. The operation specifies a maximum number of recursion to 2.")
 print("More info : https://docs.mongodb.com/master/release-notes/3.4-reference/#pipe._S_graphLookup")
 print(" ")
 print("Good luck!") 
