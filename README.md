@@ -3,7 +3,7 @@
 What is it?
 ------------
 
-This are 2 cool excersizes to learn how to use the new $facet search and graphLookup.
+This are 2 cool excersizes to learn how to use the new $facet search and $graphLookup.
 
 
 Requirements 
