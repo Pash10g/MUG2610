@@ -1,6 +1,5 @@
 
-
-print("Welcome to the Facet search excersize")
+print("Welcome to the Facet search exercises")
 print("====================================")
 print(" ")
 print("For hints please type:")
