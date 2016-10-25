@@ -23,11 +23,14 @@ Run the following command via the `mongo shell` and follow the instructions:
 
 `mongo --quiet --shell facet/facet.js` 
 
+Docs: https://docs.mongodb.com/master/release-notes/3.4/#new-aggregation-stages-for-faceted-search
+
 ## graphLookup
 Run the following command via the `mongo shell` and follow the instructions:
 
 `mongo --quiet --shell graphLookup/graphLookup.js` 
 
+Docs: https://docs.mongodb.com/master/release-notes/3.4-reference/#pipe._S_graphLookup
 
 Disclaimer
 ----------
