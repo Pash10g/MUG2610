@@ -12,7 +12,7 @@ Requirements
 Install your MongoDB 3.4 development edition:
 https://www.mongodb.com/download-center#community (see Development Releases)
 OR
-Via ["m tool"](https://github.com/aheckmann/m).
+Via ["m tool"](https://github.com/aheckmann/m), a handier way to keep track of multiple versions on OS X & Linux.
 
 Run the mongod standalone instance.
 
