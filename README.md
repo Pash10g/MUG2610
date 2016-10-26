@@ -3,13 +3,15 @@
 What is it?
 ------------
 
-This are 2 cool excersizes to learn how to use the new $facet search and $graphLookup.
+These are 2 cool excersizes to learn how to use the new $facet search and $graphLookup.
 
 
 Requirements 
 ------------------------------------------
 
 Install your MongoDB 3.4 development edition from : https://www.mongodb.com/download-center#community (see Development Releases)
+OR
+Via ["m tool"](https://github.com/aheckmann/m)
 
 Run the mongod standalone instance.
 
@@ -19,14 +21,14 @@ Instructions
 --------------
 
 ## Facet
-Run the following command via the `mongo shell` and follow the instructions:
+Run the following command via the `mongo shell` and follow the prompt instructions:
 
 `mongo --quiet --shell facet/facet.js` 
 
 Docs: https://docs.mongodb.com/master/release-notes/3.4/#new-aggregation-stages-for-faceted-search
 
 ## graphLookup
-Run the following command via the `mongo shell` and follow the instructions:
+Run the following command via the `mongo shell` and follow the prompt instructions:
 
 `mongo --quiet --shell graphLookup/graphLookup.js` 
 
