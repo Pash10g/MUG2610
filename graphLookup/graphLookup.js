@@ -17,26 +17,46 @@ var detailed_hint = function() {
          depthField: \"friendsOfFriendsLevel\",\
          maxDepth : <n>,\
          as : \"friendsHierarchy\"\
-   }},{$project : {\"name\" :1 , \"Freinds\" :{ \"name\" : \"$friendsHierarchy.name\", \"friendsOfFriendsLevel\" : \"$friendsHierarchy.friendsOfFriendsLevel\"}}}]).pretty()")
+   }}]).pretty()")
 }
 
 var answer = function() {
         print("db.users.aggregate( [{$graphLookup: { from: \"users\",\
-         startWith: \"$approved_requests\",\
-         connectFromField: \"approved_requests\",\
-         connectToField: \"_id\",\
+         startWith: \"$friends\",\
+         connectFromField: \"friends\",\
+         connectToField: \"name\",\
          depthField: \"friendsOfFriendsLevel\",\
-         maxDepth : 2,\
+         maxDepth : 1,\
          as : \"friendsHierarchy\"\
-   }},{$project : {\"name\" :1 , \"Freinds\" :{ \"name\" : \"$friendsHierarchy.name\", \"friendsOfFriendsLevel\" : \"$friendsHierarchy.friendsOfFriendsLevel\"}}}]).pretty()")
+   }}]).pretty()")
 }
 var initialize = function() {
 
 db.users.drop()
-db.users.insert({ "_id" : 1, "name" : "Alice", "image" : "profile1.png"  , "pending_requests" : [2], "approved_requests" : [ 3, 4] })
-db.users.insert({ "_id" : 2, "name" : "Bob",  "image" : "profile2.png"  ,  "pending_requests" : [], "approved_requests" : [ 3, 4] })
-db.users.insert({ "_id" : 3, "name" : "Charlie", "image" : "profile3.png" , "pending_requests" : [4] , "approved_requests" : [2,1] })
-db.users.insert({ "_id" : 4, "name" : "David", "image" : "profile4.png" , "pending_requests" : [] , "approved_requests" : [1,2] })
+
+db.users.insert({_id: 0, name: "Tomer",  friends: ["Pavel", "Adam"]})
+db.users.insert({   _id: 1,   name: "Pavel",friends: ["Tomer", "Idan", "Eric", "Pavel"]
+})
+db.users.insert(
+ {
+    _id: 2,
+    name: "Adam",
+    friends: ["Pavel", "Tomer"]
+})
+db.users.insert(
+{
+    _id: 3,
+    name: "Idan",
+    friends: ["Pavel", "Eric"]
+})
+db.users.insert(
+{
+    _id: 4,
+    name: "Eric",
+    friends: ["Pavel", "Idan"]
+})
+
+
 }
 
 initialize()
@@ -44,11 +64,11 @@ initialize()
 print(" ")
 print(" Collections ")
 print("==============")
-print("users - docs structure : {_id : Int , name : String , image : String , pending_requests : Array, approved_requests: Array }")
+print("users - docs structure : {_id : Int , name : String , Friends: Array }")
 print(" ")
 print(" The Task: ")
 print("=============")
-print("For each document in the users collection, we need to find each user friends (approved_requests) and their friends of friends. Make sure that the friends of pending requestes are not shown. The operation specifies a maximum number of recursion to 2.")
+print("For each document in the users collection, we need to find each user's friends and their friends of friends. The operation specifies a maximum number of recursion to 1.")
 print("More info : https://docs.mongodb.com/master/release-notes/3.4-reference/#pipe._S_graphLookup")
 print(" ")
 print("Good luck!") 
