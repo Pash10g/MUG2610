@@ -9,9 +9,10 @@ These are 2 cool excersizes to learn how to use the new $facet search and $graph
 Requirements 
 ------------------------------------------
 
-Install your MongoDB 3.4 development edition from : https://www.mongodb.com/download-center#community (see Development Releases)
+Install your MongoDB 3.4 development edition:
+https://www.mongodb.com/download-center#community (see Development Releases)
 OR
-Via ["m tool"](https://github.com/aheckmann/m)
+Via ["m tool"](https://github.com/aheckmann/m).
 
 Run the mongod standalone instance.
 
